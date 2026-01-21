@@ -18,5 +18,8 @@
     "nuxt-gtag": "^2.1.0",
     "vue": "latest"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
