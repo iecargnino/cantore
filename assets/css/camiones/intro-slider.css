@@ -1,0 +1,409 @@
+#camiones {
+  .wrapperIntroSlider {
+    background: rgb(5, 5, 5);
+    background: -moz-linear-gradient(0deg, rgba(5, 5, 5, 1) 0%, rgba(46, 46, 46, 1) 48%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(5, 5, 5, 1) 0%, rgba(46, 46, 46, 1) 48%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(0deg, rgba(5, 5, 5, 1) 0%, rgba(46, 46, 46, 1) 48%, rgba(0, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#050505",endColorstr="#000000",GradientType=1);
+  }
+}
+#camiones {
+  #introSlider {
+    max-width: 1800px;
+    margin-inline: auto;
+    position: relative;
+    height: 792px;
+    background-color: ;
+
+    .splide__track {
+      height: 100%;
+    }
+
+    ul.splide__list {
+      li {
+        width: 100%;
+        position: relative;
+        display: flex;
+
+        &.dark {
+          color: #fff;
+
+          .fadeVertical {
+            position: absolute;
+            z-index: 1;
+            top: 75%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+
+            opacity: 0;
+          }
+          .fadeHorizontal {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 0) 100%);
+            background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+
+            opacity: 0.4;
+          }
+
+          .content {
+            h3 {
+              &:after {
+                border-top: 1px solid #fff;
+              }
+            }
+          }
+        }
+
+        &.light {
+          color: #000;
+
+          .fadeVertical {
+            position: absolute;
+            z-index: 1;
+            top: 75%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background: rgb(255, 255, 255);
+            background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF",endColorstr="#FFFFFF",GradientType=1);
+
+            opacity: 0;
+          }
+          .fadeHorizontal {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background: rgb(255, 255, 255);
+            background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 26%, rgba(255, 255, 255, 0) 100%);
+            background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 26%, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 26%, rgba(255, 255, 255, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+
+            opacity: 0.2;
+          }
+
+          .content {
+            h3 {
+              &:after {
+                border-top: 1px solid #000;
+              }
+            }
+          }
+        }
+
+        .pageWidth {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          z-index: 10;
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          align-items: flex-start;
+          z-index: 1;
+
+          h3 {
+            font-family: "MBCorpoSTextRegular";
+            font-weight: normal;
+            font-size: clamp(0.7rem, 3.5vw, 1.1rem);
+            line-height: 1.4em;
+            z-index: 1;
+            max-width: 500px;
+            margin-bottom: 0.8em;
+            padding-bottom: 0.7em;
+            position: relative;
+
+            &:after {
+              content: "";
+              width: 40px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+          }
+
+          h2 {
+            font-weight: bold;
+            font-family: "MBCorpoSTitleCondOfficeBold", serif;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+
+            font-size: clamp(1.8rem, 4.5vw, 3.4rem);
+            line-height: 1.1em;
+            margin-bottom: 0.3em;
+
+            span {
+              color: var(--wb-blue-65);
+            }
+          }
+
+          p {
+            font-family: "MBCorpoSTitleCondOfficeRegular";
+            font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+            line-height: 1.3em;
+            max-width: 500px;
+            margin-bottom: 1.3em;
+          }
+
+          p span {
+            white-space: nowrap;
+          }
+        }
+
+        picture {
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+
+    .splide__pagination {
+      flex-direction: row;
+      align-items: center;
+      bottom: 25px;
+      gap: 18px;
+
+      .splide__pagination__page {
+        background: #fff;
+        border: 0;
+        border-radius: 0;
+        display: inline-block;
+        height: 4px;
+        width: 75px;
+        opacity: 1;
+        padding: 0;
+        position: relative;
+        transition: transform 0.2s linear;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+        margin: 0;
+      }
+
+      .splide__pagination__page.is-active {
+        background: var(--wb-blue-65);
+        transform: scale(1);
+        z-index: 1;
+        opacity: 1;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1800px) {
+  #camiones {
+    #introSlider {
+      height: 44vw;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #camiones {
+    #introSlider {
+      height: 66.7vw;
+
+      & ul.splide__list {
+        & li {
+          &.light,
+          &.dark {
+            .fadeHorizontal {
+              display: none;
+            }
+          }
+
+          &.light,
+          &.dark {
+            .fadeVertical {
+              top: 50%;
+            }
+          }
+
+          .pageWidth {
+            justify-content: flex-end;
+            padding-bottom: 3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #camiones {
+    #introSlider {
+      height: 115vw;
+
+      .splide__pagination {
+        gap: 12px;
+
+        .splide__pagination__page {
+          height: 3px;
+          width: 55px;
+        }
+      }
+
+      ul.splide__list {
+        li {
+          &.light {
+            background-color: #fff;
+            .fadeVertical {
+              top: 50%;
+              bottom: 15vw;
+              opacity: 1;
+            }
+          }
+
+          &.dark {
+            background-color: #000;
+            .fadeVertical {
+              top: 50%;
+              bottom: 15vw;
+              opacity: 1;
+            }
+          }
+
+          .pageWidth {
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 2em;
+          }
+
+          .content {
+            margin-bottom: 1em;
+            align-items: center;
+
+            h2 {
+              text-align: center;
+              max-width: 100%;
+            }
+
+            h3 {
+              display: none;
+            }
+
+            p {
+              text-align: center;
+              max-width: 100%;
+            }
+          }
+
+          picture {
+            bottom: 15vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #camiones {
+    #introSlider {
+      height: 140vw;
+
+      .splide__pagination {
+        gap: 8px;
+
+        .splide__pagination__page {
+          height: 3px;
+          width: 30px;
+        }
+      }
+
+      ul.splide__list {
+        li {
+          &.light {
+            background-color: #fff;
+            .fadeVertical {
+              top: 50%;
+              bottom: 40vw;
+            }
+          }
+
+          &.dark {
+            background-color: #000;
+            .fadeVertical {
+              top: 50%;
+              bottom: 40vw;
+            }
+          }
+
+          picture {
+            bottom: 40vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #camiones {
+    #introSlider {
+      height: 160vw;
+
+      ul.splide__list {
+        li {
+          &.light {
+            background-color: #fff;
+            .fadeVertical {
+              top: 30%;
+              bottom: 60vw;
+            }
+          }
+
+          &.dark {
+            background-color: #000;
+            .fadeVertical {
+              top: 30%;
+              bottom: 60vw;
+            }
+          }
+
+          picture {
+            bottom: 60vw;
+          }
+        }
+      }
+    }
+  }
+}

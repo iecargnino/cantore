@@ -1,0 +1,335 @@
+/* RESET */
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  /* padding: 0; */
+}
+
+/* dark mode user-agent-styles */
+/* improves punctuation in supported browsers */
+html {
+  color-scheme: dark light;
+  hanging-punctuation: first last;
+  font-family: "MBCorpoSTextOfficeRegular", sans-serif;
+}
+
+/* min body height */
+/* text rendering */
+body {
+  min-height: 100svh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #000;
+  background-color: #fff;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Improved heading in supported browsers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* text-wrap: balance; */
+}
+
+/* Reset propio */
+html {
+  margin: 0px;
+  font-size: 16px;
+}
+
+#selector {
+  a {
+    text-decoration: none;
+    color: #008dfc;
+  }
+}
+
+h1,
+h2,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* GENERAL */
+:root {
+  --blue: #008dfc;
+}
+
+#selector {
+  .pageWidth {
+    max-width: 1680px;
+    width: var(--wb-grid-content-width);
+    margin-inline: auto;
+    position: relative;
+  }
+}
+
+/* LOADING */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, #0078d6);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-zp9dbg 1.2s infinite linear;
+}
+
+@keyframes spinner-zp9dbg {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* TEMA */
+:root,
+:host {
+  --wb-grid-gutter-width: 0.5rem;
+  --wb-grid-content-width: 90%;
+  --wb-spacing-3xs: 0.25rem;
+  --wb-spacing-xxs: 0.5rem;
+  --wb-spacing-xs: 1rem;
+  --wb-spacing-s: 1.5rem;
+  --wb-spacing-m: 2rem;
+  --wb-spacing-l: 3rem;
+  --wb-spacing-xl: 4rem;
+  --wb-spacing-xxl: 5rem;
+  --wb-transparent: #0000;
+  --wb-white: #fff;
+  --wb-white-opacity-high: #ffffffd9;
+  --wb-white-opacity-medium: #ffffff8f;
+  --wb-white-opacity-low: #ffffff40;
+  --wb-white-opacity-extra-low: #ffffff26;
+  --wb-black: #000;
+  --wb-black-opacity-high: #000000bf;
+  --wb-black-opacity-medium: #0000008f;
+  --wb-black-opacity-low: #0000001a;
+  --wb-black-opacity-extra-low: #0000000d;
+  --wb-blue-5: #00182c;
+  --wb-blue-10: #002441;
+  --wb-blue-15: #003156;
+  --wb-blue-20: #013c6b;
+  --wb-blue-25: #014880;
+  --wb-blue-30: #025497;
+  --wb-blue-35: #0260ab;
+  --wb-blue-40: #036dc1;
+  --wb-blue-45: #0078d6;
+  --wb-blue-50: #008dfc;
+  --wb-blue-55: #1998fc;
+  --wb-blue-60: #33a4fd;
+  --wb-blue-65: #4eaffd;
+  --wb-blue-70: #66bbfd;
+  --wb-blue-75: #80c6ff;
+  --wb-blue-80: #9ad2fe;
+  --wb-blue-85: #b4ddfe;
+  --wb-blue-90: #cce8ff;
+  --wb-blue-95: #e6f5ff;
+  --wb-green-5: #051a07;
+  --wb-green-10: #07260b;
+  --wb-green-15: #0a330f;
+  --wb-green-20: #0d4013;
+  --wb-green-25: #0f4d16;
+  --wb-green-30: #125a1a;
+  --wb-green-35: #14661e;
+  --wb-green-40: #177321;
+  --wb-green-45: #198025;
+  --wb-green-50: #21a330;
+  --wb-green-55: #37ac45;
+  --wb-green-60: #4db559;
+  --wb-green-65: #64bf6e;
+  --wb-green-70: #7ac883;
+  --wb-green-75: #90d198;
+  --wb-green-80: #a6daac;
+  --wb-green-85: #bce3c1;
+  --wb-green-90: #d3edd6;
+  --wb-green-95: #e9f6ea;
+  --wb-red-5: #2b0707;
+  --wb-red-10: #410a0a;
+  --wb-red-15: #570d0d;
+  --wb-red-20: #6d1111;
+  --wb-red-25: #821414;
+  --wb-red-30: #981717;
+  --wb-red-35: #b21e23;
+  --wb-red-40: #c31e1e;
+  --wb-red-45: #d92121;
+  --wb-red-50: #ff4a4a;
+  --wb-red-55: #ff5c5c;
+  --wb-red-60: #ff6e6e;
+  --wb-red-65: #ff8080;
+  --wb-red-70: #ff9292;
+  --wb-red-75: #ffa5a5;
+  --wb-red-80: #ffb7b7;
+  --wb-red-85: #ffc9c9;
+  --wb-red-90: #ffdbdb;
+  --wb-red-95: #ffeded;
+  --wb-yellow-5: #2e2600;
+  --wb-yellow-10: #463900;
+  --wb-yellow-15: #5d4c00;
+  --wb-yellow-20: #745f00;
+  --wb-yellow-25: #8b7100;
+  --wb-yellow-30: #a28400;
+  --wb-yellow-35: #ba9700;
+  --wb-yellow-40: #d1aa00;
+  --wb-yellow-45: #e8bd00;
+  --wb-yellow-50: #facc00;
+  --wb-yellow-55: #fbd11a;
+  --wb-yellow-60: #fbd633;
+  --wb-yellow-65: #fcdb4c;
+  --wb-yellow-70: #fce066;
+  --wb-yellow-75: #fde680;
+  --wb-yellow-80: #fdeb99;
+  --wb-yellow-85: #fef0b3;
+  --wb-yellow-90: #fef5cc;
+  --wb-yellow-95: #fffae6;
+  --wb-grey-5: #0d0d0d;
+  --wb-grey-10: #1a1a1a;
+  --wb-grey-15: #262626;
+  --wb-grey-20: #333;
+  --wb-grey-25: #424242;
+  --wb-grey-30: #4f4f4f;
+  --wb-grey-35: #5c5c5c;
+  --wb-grey-40: #696969;
+  --wb-grey-45: #767676;
+  --wb-grey-50: #848484;
+  --wb-grey-55: #919191;
+  --wb-grey-60: #9f9f9f;
+  --wb-grey-65: #adadad;
+  --wb-grey-70: #bbb;
+  --wb-grey-75: #c9c9c9;
+  --wb-grey-80: #dbdbdb;
+  --wb-grey-85: #e8e8e8;
+  --wb-grey-90: #f4f4f4;
+  --wb-grey-95: #f8f8f8;
+  --wb-mb-brand: #0078d6;
+  --wb-mb-background: #fff;
+  --wb-amg-red-5: #8a0a0a;
+  --wb-amg-red-10: #8a0a0a;
+  --wb-amg-red-15: #8a0a0a;
+  --wb-amg-red-20: #8a0a0a;
+  --wb-amg-red-25: #8a0a0a;
+  --wb-amg-red-30: #8a0a0a;
+  --wb-amg-red-35: #b21e23;
+  --wb-amg-red-40: #b21e23;
+  --wb-amg-red-45: #b21e23;
+  --wb-amg-red-50: #b21e23;
+  --wb-amg-red-55: #b21e23;
+  --wb-amg-red-60: #b21e23;
+  --wb-amg-red-65: #b21e23;
+  --wb-amg-red-70: #b21e23;
+  --wb-amg-red-75: #b21e23;
+  --wb-amg-red-80: #b21e23;
+  --wb-amg-red-85: #b21e23;
+  --wb-amg-red-90: #b21e23;
+  --wb-amg-red-95: #b21e23;
+  --wb-amg-brand: #b21e23;
+  --wb-amg-background: #000;
+  --wb-maybach-black-5: #000;
+  --wb-maybach-black-10: #000;
+  --wb-maybach-black-15: #000;
+  --wb-maybach-black-20: #000;
+  --wb-maybach-black-25: #333;
+  --wb-maybach-black-30: #000;
+  --wb-maybach-black-35: #333;
+  --wb-maybach-black-40: #333;
+  --wb-maybach-black-45: #000;
+  --wb-maybach-black-50: #000;
+  --wb-maybach-black-55: #000;
+  --wb-maybach-black-60: #333;
+  --wb-maybach-black-65: #333;
+  --wb-maybach-black-70: #333;
+  --wb-maybach-black-75: #333;
+  --wb-maybach-black-80: #333;
+  --wb-maybach-black-85: #333;
+  --wb-maybach-black-90: #333;
+  --wb-maybach-black-95: #333;
+  --wb-maybach-brand: #000;
+  --wb-maybach-background: #e6e0d7;
+  --wb-font-title: "MBCorpo Title", "DaimlerCAC-Regular", "DaimlerCACArab-Regular", serif;
+  --wb-font-text: "MBCorpo Text", "DaimlerCS-Regular", "DaimlerCSArab-Regular", sans-serif;
+  --wb-font-text-bold: "MBCorpo Text", "DaimlerCS-Regular", "DaimlerCSArab-Regular", sans-serif;
+  --wb-shadow-s: 0 0 0.125rem 0 #0000001a, 0 0.125rem 0.25rem 0 #0000001a;
+  --wb-shadow-m: 0 0 0.125rem 0 #0000001a, 0 0.25rem 0.5rem 0 #0000001a;
+  --wb-shadow-l: 0 0 0.25rem 0 #0000001a, 0 1rem 1.5rem 0 #0000001a;
+  --wb-fade: cubic-bezier(0, 0, 0.3, 1);
+  --wb-move: cubic-bezier(0.3, 0, 0, 1);
+  --wb-open: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --wb-border-width-none: 0rem;
+  --wb-border-width-s: 0.0625rem;
+  --wb-border-width-m: 0.125rem;
+  --wb-radius-none: 0rem;
+  --wb-radius-s: 0.125rem;
+  --wb-radius-m: 0.25rem;
+  --wb-radius-l: 0.5rem;
+  --wb-radius-full: 50%;
+  --wb-grid-width: min(var(--wb-grid-content-width), 105rem);
+  --wb-grid-column-width: min((var(--wb-grid-content-width) - 11 * var(--wb-grid-gutter-width))/12, 6.91667rem);
+  --wb-opacity-1: 5%;
+  --wb-opacity-2: 25%;
+  --wb-opacity-3: 40%;
+  --wb-opacity-4: 50%;
+  --wb-opacity-5: 75%;
+  --wb-opacity-6: 100%;
+  --wb-opacity-none: 0%;
+  --wb-opacity-base: 100%;
+  --linear-gradient-blue-45: linear-gradient(to top, var(--wb-blue-45) 2px, transparent 2px), linear-gradient(to top, var(--wb-grey-70) 1px, transparent 1px);
+  --linear-gradient-blue-50: linear-gradient(to top, var(--wb-blue-50) 2px, transparent 2px), linear-gradient(to top, var(--wb-grey-70) 1px, transparent 1px);
+  --linear-gradient-white: linear-gradient(to top, var(--wb-white) 1px, transparent 1px);
+  --linear-gradient-black: linear-gradient(to top, var(--wb-black) 1px, transparent 1px);
+}
+
+#selector {
+  .btn {
+    position: relative;
+    z-index: 1;
+    background-color: var(--wb-blue-45);
+    border: 1px solid var(--wb-blue-45);
+    color: #fff;
+    font-size: 16px;
+    font-family: "MBCorpoSTextOfficeBold", sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 11px 23px;
+
+    &:hover {
+      background-color: var(--wb-blue-25);
+    }
+  }
+}

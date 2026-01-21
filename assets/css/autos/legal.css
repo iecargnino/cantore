@@ -1,0 +1,91 @@
+#autos {
+  #legal {
+    font-size: clamp(1.4rem, 4.5vw, 2.4rem);
+    padding: 2em 0;
+
+    .wrapper {
+      max-width: 980px;
+
+      h2 {
+        font-weight: normal;
+        font-family: "DaimlerCACRegular", serif;
+        position: relative;
+        z-index: 1;
+        font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+        margin-bottom: 0.6em;
+      }
+
+      h3 {
+        font-family: "MBCorpoSTextOfficeBold";
+        font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+        line-height: 1.8em;
+        margin-top: 3.6em;
+        margin-bottom: 0.9em;
+        color: var(--wb-grey-45);
+      }
+      p {
+        font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+        line-height: 1.8em;
+
+        margin-bottom: 1.8em;
+        color: var(--wb-grey-45);
+
+        strong {
+          font-family: "MBCorpoSTextOfficeBold";
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+
+      ul {
+        li {
+          font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+          line-height: 1.8em;
+
+          /* margin-bottom: 0.9em; */
+          color: var(--wb-grey-45);
+
+          padding-left: 1em;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 1.2em;
+            height: 1.2em;
+            top: 0.3em;
+            left: -0.2em;
+            background-image: url("/images/autos/icons/check-blue.svg");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+          }
+        }
+      }
+      .missing {
+        background-color: red;
+      }
+    }
+  }
+  #notaLegal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-bottom: 30px;
+
+    p {
+      /* max-width: 60%; */
+      font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+      font-size: 14px;
+      line-height: 1.3em;
+      color: var(--wb-grey-45);
+
+      &:not(:last-child) {
+        margin-bottom: 0.65em;
+      }
+    }
+  }
+}

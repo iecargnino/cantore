@@ -1,0 +1,139 @@
+#camiones {
+  #shortcuts {
+    background-color: #000;
+    color: #fff;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      padding-bottom: 5em;
+
+      a {
+        position: relative;
+        display: block;
+        width: 328px;
+        height: 100%;
+        background: rgb(36, 36, 36);
+        background: -moz-linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(51, 51, 51, 1) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(51, 51, 51, 1) 100%);
+        background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(51, 51, 51, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242424",endColorstr="#333333",GradientType=1);
+
+        transition: background-color 0.2s;
+
+        padding: 16px;
+
+        color: #fff;
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          transition: transform 0.2s;
+
+          picture.icon {
+            width: 54px;
+            height: 54px;
+            margin-bottom: 16px;
+            opacity: 1;
+
+            transition: all 0.2s;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              object-position: 50% 50%;
+              transition: 0.3s;
+            }
+          }
+
+          h4 {
+            font-family: "MBCorpoSTitleCondOfficeRegular";
+            font-size: 20px;
+            margin-bottom: 1em;
+            font-weight: normal;
+            line-height: 24px;
+            padding-right: 20px;
+          }
+        }
+
+        picture.arrow {
+          position: absolute;
+          transform: translate(-16px, -50%);
+          right: 0;
+          width: 16px;
+          height: 16px;
+          bottom: 16px;
+          margin-right: 0;
+
+          transition: all 0.2s;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: 50% 50%;
+            transition: 0.3s;
+          }
+        }
+
+        &:hover {
+          background: rgb(36, 36, 36);
+          background: -moz-linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(25, 25, 25, 1) 100%);
+          background: -webkit-linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(25, 25, 25, 1) 100%);
+          background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(25, 25, 25, 1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242424",endColorstr="#191919",GradientType=1);
+
+          /* .content {
+          transform: translateX(-24px);
+
+          picture.icon {
+            opacity: 0;
+            transform: translateX(16px);
+          }
+        } */
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1250px) {
+  #camiones {
+    #shortcuts {
+      ul {
+        a {
+          width: 228px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #camiones {
+    #shortcuts {
+      ul {
+        a {
+          width: 168px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #camiones {
+    #shortcuts {
+      ul {
+        grid-auto-flow: row;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+
+        a {
+          width: 120px;
+        }
+      }
+    }
+  }
+}

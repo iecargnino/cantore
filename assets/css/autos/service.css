@@ -1,0 +1,71 @@
+#autos {
+  #service {
+    font-size: clamp(1.4rem, 4.5vw, 2.4rem);
+    padding: 1.4em 0 0.8em 0;
+
+    h3 {
+      font-weight: normal;
+      font-family: "DaimlerCACRegular", serif;
+      position: relative;
+      z-index: 1;
+
+      margin-bottom: 0.4em;
+    }
+
+    p {
+      font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+      line-height: 1.4em;
+      max-width: 760px;
+      margin-bottom: 2em;
+      color: var(--wb-grey-20);
+
+      &.nota {
+        color: var(--wb-grey-45);
+        font-size: 0.35em !important;
+        margin-top: 2em;
+        margin-bottom: 0;
+      }
+    }
+
+    .servicesAB {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 160px;
+
+      .caracteristicaDestacadaCard {
+        flex-direction: column;
+        gap: 50px;
+
+        > div {
+          width: 100%;
+        }
+      }
+    }
+
+    .servicePlusGeneric {
+      .caracteristicaDestacadaCard {
+        flex-direction: row;
+      }
+    }
+
+    .resume {
+      margin-bottom: 4em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #autos {
+    #service {
+      .servicesAB {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 160px;
+      }
+      .servicePlusGeneric {
+        .caracteristicaDestacadaCard {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

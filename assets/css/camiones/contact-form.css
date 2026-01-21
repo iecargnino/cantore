@@ -1,0 +1,214 @@
+#camiones {
+  #contactForm {
+    margin-top: 100px;
+    margin-bottom: 80px;
+
+    .pageWidth {
+      max-width: 1100px;
+      margin-inline: auto;
+
+      h2 {
+        font-weight: normal;
+        font-family: "DaimlerCACRegular", serif;
+        position: relative;
+        z-index: 1;
+
+        font-size: clamp(2.3rem, 4.5vw, 3.1rem);
+        margin-bottom: 20px;
+        margin-top: 0.6em;
+      }
+
+      p {
+        font-size: clamp(0.9rem, 4.5vw, 1.3rem);
+        line-height: 1.4em;
+        margin-bottom: 1.4em;
+      }
+
+      p.legal {
+        margin-top: 25px;
+        margin-bottom: 40px;
+
+        font-size: clamp(0.9rem, 4.5vw, 1rem);
+
+        span {
+          background-color: red;
+        }
+      }
+
+      form {
+        margin-bottom: 30px;
+
+        .wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+        }
+        .col2 {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+        }
+
+        .inputWrapper {
+          position: relative;
+          width: 100%;
+
+          label {
+            position: absolute;
+            font-size: 12px;
+            color: #fff;
+            left: 16px;
+            top: 6px;
+            z-index: 1;
+          }
+
+          input {
+            position: relative;
+            width: 100%;
+            border: 1px solid var(--wb-grey-40);
+            background-color: var(--wb-grey-15);
+            color: #fff;
+            padding: 24px 48px 6px 16px;
+            font-size: 16px;
+            height: 52px;
+            border-radius: 0;
+            font: inherit;
+            z-index: 0;
+
+            &:focus {
+              border: 1px solid var(--truck-blue);
+            }
+
+            &:focus-visible {
+              /* outline: 2px solid var(--truck-blue); */
+              outline: none;
+              border-radius: 0;
+            }
+          }
+
+          .error {
+            font-size: 12px;
+            color: var(--wb-red-45);
+            margin-left: 16px;
+            margin-top: 3px;
+            font-family: "MBCorpoSTextOfficeBold";
+            font-weight: bold;
+          }
+
+          &.alert {
+            input {
+              border: 1px solid var(--wb-red-45);
+
+              background-image: url("/images/camiones/icons/alert.svg");
+              background-position: calc(100% - 16px) 12px;
+              background-size: 24px 24px;
+              background-repeat: no-repeat;
+            }
+          }
+
+          &.city {
+            width: 66%;
+          }
+        }
+
+        .action {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #camiones {
+    #contactForm {
+      .pageWidth {
+        max-width: 688px;
+
+        form {
+          .col2 {
+            grid-template-columns: repeat(1, 1fr);
+          }
+
+          .inputWrapper.city {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Custom Checkbos ================================================= */
+#camiones {
+  .checkboxWrapper {
+    margin-top: 25px;
+
+    position: relative;
+    margin-bottom: 0;
+    display: flex;
+
+    .checkmark {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 22px;
+      width: 22px;
+      border: 1px solid var(--wb-grey-40);
+      background-color: var(--wb-grey-15);
+      white-space: nowrap;
+      overflow: hidden;
+      text-indent: 30px;
+
+      &:hover {
+        background-color: var(--wb-grey-25);
+        border: 1px solid var(--truck-blue);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+    input:checked ~ .checkmark,
+    input:checked ~ .checkmark:hover {
+      background-color: var(--truck-blue);
+      background-image: url("/images/camiones/icons/check-white.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+      border: 1px solid var(--truck-blue);
+    }
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    input:disabled ~ .checkmark,
+    input:disabled ~ .checkmark:hover {
+      border: 1px solid #c8c8c8;
+    }
+
+    input:checked:disabled ~ .checkmark,
+    input:checked:disabled ~ .checkmark:hover {
+      background-color: #adc9d7;
+      background-image: url("/images/camiones/icons/check-white.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+      border: 1px solid #adc9d7;
+    }
+
+    .description {
+      padding-left: 16px;
+      padding-top: 1px;
+      display: inline-block;
+      font-size: 17px;
+
+      font-size: clamp(0.9rem, 4.5vw, 1rem);
+      line-height: 1.4em;
+      color: var(--wb-grey-20);
+      color: #fff;
+    }
+  }
+}

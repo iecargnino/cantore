@@ -1,0 +1,320 @@
+#camiones {
+  footer {
+    color: #fff;
+    background-color: #000;
+
+    .BUs {
+      width: 100%;
+      max-width: 1800px;
+      margin-inline: auto;
+
+      background: rgb(23, 23, 23);
+      background: -moz-linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(51, 51, 51, 1) 100%);
+      background: -webkit-linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(51, 51, 51, 1) 100%);
+      background: linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(51, 51, 51, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#333333",GradientType=1);
+
+      .pageWidth {
+        display: flex;
+        flex-direction: column;
+        font-size: clamp(18px, 4.5vw, 24px);
+
+        padding-top: 3em;
+        padding-bottom: 3em;
+
+        h5 {
+          font-family: "MBCorpoSTitleCondOfficeRegular";
+          font-weight: normal;
+          margin-bottom: 0.8em;
+          font-size: clamp(22px, 4.5vw, 34px);
+        }
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(0, 180px));
+          gap: 1.8em;
+
+          a {
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #ffffff99;
+            padding: clamp(2em, 5vw, 3em) 0;
+
+            background-color: var(--wb-grey-10);
+            background-color: #000;
+            border: 1px solid var(--wb-grey-20);
+
+            transition: all 0.3;
+
+            img {
+              transition: all 0.3;
+              width: 100%;
+              max-width: 60px;
+              opacity: 0.6;
+              transition: all 0.3s;
+              margin-bottom: 0.4em;
+            }
+
+            &:hover {
+              background-color: var(--wb-grey-5);
+
+              color: #ffffffff;
+
+              img {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pageWidth {
+      display: flex;
+      flex-direction: column;
+
+      .agency {
+        font-size: 24px;
+        font-size: clamp(18px, 4.5vw, 24px);
+
+        padding: 20px 0 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          font-size: 1.2rem;
+          position: relative;
+          color: #a8a8a8;
+          padding-bottom: 2px;
+
+          white-space: nowrap;
+          display: flex;
+          align-items: center;
+          transition: all 0.3s;
+
+          img {
+            height: 100%;
+            opacity: 0.6;
+            transition: all 0.3s;
+          }
+
+          &:hover {
+            color: #fff;
+
+            img {
+              opacity: 1;
+            }
+          }
+        }
+
+        .social {
+          display: flex;
+          gap: 30px;
+
+          picture {
+            width: 24px;
+            height: 24px;
+            transition: all 0.2s;
+            opacity: 0.7;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .copyAndLegal {
+        width: 100%;
+        border-top: 1px solid var(--wb-grey-45);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        padding: 25px 0 90px 0;
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          flex: 1;
+
+          a {
+            position: relative;
+            color: #a8a8a8;
+            padding-bottom: 2px;
+
+            white-space: nowrap;
+
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              /* border: 1px solid #fff; */
+              height: 1px;
+              background-color: #fff;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              width: 0;
+              transition: all 0.3s;
+            }
+
+            &:hover {
+              color: #fff;
+
+              &:after {
+                width: 100%;
+                transition: all 0.3s;
+              }
+            }
+          }
+        }
+
+        .iso {
+          display: flex;
+          gap: 2em;
+
+          img {
+            height: 24px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #camiones {
+    footer {
+      .pageWidth {
+        .copyAndLegal {
+          ul {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+#camiones {
+  #floatingContact {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.2s;
+
+    .pageWidth {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      height: 0;
+      max-width: 100%;
+      width: 100%;
+
+      .contact {
+        display: flex;
+        width: 58px;
+        height: 58px;
+        /* border-radius: 10px; */
+        background-color: #00adef;
+        /* background-image: url(img/icon_contact.svg); */
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+        overflow: hidden;
+        transition: all 0.2s;
+        padding-left: 58px;
+        align-items: center;
+        overflow: hidden;
+        /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.6); */
+        position: absolute;
+        right: 0;
+        top: -80px;
+        color: #fff;
+
+        &:hover {
+          background-color: var(--wb-grey-20);
+
+          img {
+            opacity: 1;
+          }
+        }
+
+        img {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          right: 10px;
+          bottom: 10px;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  #camiones {
+    #floatingContact .contact {
+      right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #camiones {
+    footer {
+      .pageWidth {
+        .agency {
+          display: flex;
+          flex-direction: column;
+          /* justify-content: space-between; */
+          align-items: center;
+
+          .social {
+            margin-top: 20px;
+          }
+        }
+
+        .copyAndLegal {
+          display: flex;
+          flex-direction: column;
+          .copy {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #camiones {
+    footer {
+      .BUs {
+        .pageWidth {
+          .agency {
+            .brandAndBUs {
+              flex-direction: column;
+              align-items: center;
+            }
+          }
+
+          .wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.8em;
+          }
+        }
+      }
+    }
+  }
+}

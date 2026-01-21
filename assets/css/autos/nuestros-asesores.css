@@ -1,0 +1,71 @@
+#autos {
+  #asesores {
+    position: relative;
+    padding-top: 80px;
+
+    h2 {
+      font-weight: normal;
+      font-family: "DaimlerCACRegular", serif;
+      position: relative;
+      z-index: 1;
+      font-size: clamp(1.4rem, 4.5vw, 2.4rem);
+      margin-bottom: 0.4em;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 8em;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 24px 16px 24px 16px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+
+        h3 {
+          font-family: "MBCorpoSTextOfficeBold";
+
+          span {
+            font-family: "MBCorpoSTextOfficeRegular";
+            font-weight: normal;
+            font-size: 0.8em;
+            display: block;
+          }
+        }
+
+        div {
+          display: flex;
+          align-items: flex-start;
+          gap: 6px;
+
+          a {
+            color: #000;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          img {
+            width: 20px;
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #autos {
+    #asesores {
+      padding-top: 0px;
+
+      ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

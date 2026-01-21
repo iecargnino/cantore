@@ -1,0 +1,206 @@
+#autos {
+  #intro {
+    position: relative;
+
+    width: 100%;
+    height: 44vw;
+    position: relative;
+    display: flex;
+
+    &.dark {
+      color: #fff;
+      background-color: #000;
+
+      .fadeVertical {
+        position: absolute;
+        z-index: 1;
+        top: 75%;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+
+        background: rgb(0, 0, 0);
+        background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+
+        opacity: 1;
+      }
+      .fadeHorizontal {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background: rgb(0, 0, 0);
+        background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 1) 6%, rgba(0, 0, 0, 0) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 6%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 6%, rgba(0, 0, 0, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+
+        opacity: 0.4;
+      }
+    }
+    &.light {
+      color: #000;
+      background-color: #fff;
+
+      .fadeVertical {
+        position: absolute;
+        z-index: 1;
+        top: 75%;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+
+        background: rgb(255, 255, 255);
+        background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF",endColorstr="#FFFFFF",GradientType=1);
+
+        opacity: 1;
+      }
+      .fadeHorizontal {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background: rgb(255, 255, 255);
+        background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 0) 50%);
+        background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 0) 50%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 0) 50%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+
+        opacity: 0.7;
+      }
+    }
+
+    .pageWidth {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      align-items: flex-start;
+      z-index: 1;
+
+      h1 {
+        font-weight: normal;
+        font-family: "DaimlerCACRegular", serif;
+        position: relative;
+        z-index: 1;
+
+        font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+        margin-bottom: 0.3em;
+      }
+
+      p {
+        font-size: clamp(0.7rem, 3.5vw, 1.2rem);
+        line-height: 1.4em;
+        max-width: 500px;
+        margin-bottom: 1.3em;
+      }
+
+      p span {
+        white-space: nowrap;
+      }
+    }
+
+    picture {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #autos {
+    #intro {
+      min-height: 66.7vw;
+
+      &.light,
+      &.dark {
+        .fadeVertical {
+          top: 50%;
+        }
+      }
+
+      &.light,
+      &.dark {
+        .fadeHorizontal {
+          display: none;
+        }
+      }
+
+      .pageWidth {
+        justify-content: flex-end;
+        padding-bottom: 3em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #autos {
+    #intro {
+      height: 115vw;
+
+      .pageWidth {
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 1em;
+      }
+
+      &.light,
+      &.dark {
+        .fadeVertical {
+          top: 50%;
+          bottom: 15vw;
+        }
+      }
+
+      .content {
+        align-items: center;
+
+        h2 {
+          text-align: center;
+          max-width: 100%;
+        }
+
+        p {
+          text-align: center;
+          max-width: 100%;
+        }
+      }
+
+      picture {
+        bottom: 15vw;
+      }
+    }
+  }
+}

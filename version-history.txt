@@ -1,0 +1,24 @@
+Version inicial
+
+Correcciones:
+
+2024-11-14
+http://localhost:3000/camiones/postventa/servicios
+• Camiones Servicios - Se eliminó "Total service" sin descripción y se ajusto a 3 columnas
+
+http://localhost:3000/autos/legal/cookies
+http://localhost:3000/vans/legal/cookies
+http://localhost:3000/camiones/legal/cookies
+• Se eliminó link "Por favor haga clic aquí para instalar la cookie opt-out.".
+
+http://localhost:3000/autos/sobre-nosotros/sucursales
+http://localhost:3000/vans/sobre-nosotros/sucursales
+http://localhost:3000/camiones/nosotros/sucursales
+• Sucursales - Pasa datos del mapa a la SucursalCard.vue
+• Sucursales - link en teléfono
+
+
+http://localhost:3000/autos/asesorate/nuestros-asesores
+http://localhost:3000/vans/asesorate/nuestros-asesores
+http://localhost:3000/camiones/nosotros/asesores-comerciales
+• Asesores comerciales - Inclusión de "cargo" y link para el teléfono

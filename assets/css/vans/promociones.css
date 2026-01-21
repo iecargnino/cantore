@@ -1,0 +1,157 @@
+#vans {
+  #promociones {
+    padding: 4em 0 0.8em 0;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4em;
+
+      font-size: clamp(1rem, 4.5vw, 1.1rem);
+
+      h2 {
+        font-weight: normal;
+        font-family: "DaimlerCACRegular", serif;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0.6em;
+        color: var(--wb-grey-20);
+        font-size: clamp(1.4rem, 3vw, 1.6rem);
+
+        span {
+          font-size: clamp(1rem, 2.2vw, 1.12rem);
+          line-height: 1.4em;
+          margin-bottom: 1.4em;
+          color: var(--wb-grey-45);
+        }
+      }
+    }
+
+    /* .promo {
+      display: flex;
+      align-items: center;
+      gap: 160px;
+
+      margin-bottom: 160px;
+
+      &.rtl {
+        flex-direction: row-reverse;
+      }
+      &.ttb {
+        flex-direction: column;
+      }
+
+      > div {
+        width: calc((100% - 160px) / 2);
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      h2 {
+        font-weight: normal;
+        font-family: "DaimlerCACRegular", serif;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0.6em;
+        color: var(--wb-grey-20);
+        font-size: clamp(2rem, 4.5vw, 2rem);
+      }
+
+      h3 {
+        font-size: clamp(1rem, 4.5vw, 1.1rem);
+        margin-bottom: 0.6em;
+        font-family: "MBCorpoSTextOfficeBold";
+        font-weight: bold;
+      }
+
+      p,
+      ul li {
+        font-size: clamp(0.9rem, 4.5vw, 1.12rem);
+        line-height: 1.4em;
+        margin-bottom: 1.4em;
+        color: var(--wb-grey-45);
+      }
+
+      p.highlight {
+        font-family: "MBCorpoSTextOfficeBold";
+        font-weight: bold;
+        background-color: var(--wb-grey-90);
+        padding: 0.3em 0.6em;
+      }
+
+      p.dto {
+        font-family: "MBCorpoSTextOfficeBold";
+        font-weight: bold;
+        color: #000;
+      }
+
+      picture {
+        height: 0;
+        padding-top: 100%;
+        width: 100%;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          object-fit: cover;
+          object-position: 50% 50%;
+          transition: 0.3s;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        li {
+          padding-left: 1em;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 1.2em;
+            height: 1.2em;
+            top: 0.1em;
+            left: -0.2em;
+            background-image: url("/images/vans/icons/check-blue.svg");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+          }
+        }
+      }
+    } */
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #vans {
+    #promociones {
+      ul {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #vans {
+    #promociones {
+      ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

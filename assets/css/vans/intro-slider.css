@@ -1,0 +1,345 @@
+#vans {
+  #introSlider {
+    position: relative;
+    height: 44vw;
+
+    .splide__track {
+      height: 100%;
+    }
+
+    ul.splide__list {
+      li {
+        width: 100%;
+        /* min-height: 44vw; */
+        position: relative;
+        display: flex;
+
+        &.dark {
+          color: #fff;
+
+          .fadeVertical {
+            position: absolute;
+            z-index: 1;
+            top: 75%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+
+            opacity: 1;
+          }
+          .fadeHorizontal {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 0) 100%);
+            background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+
+            opacity: 0.4;
+          }
+        }
+
+        &.light {
+          color: #000;
+
+          .fadeVertical {
+            position: absolute;
+            z-index: 1;
+            top: 75%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background: rgb(255, 255, 255);
+            background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF",endColorstr="#FFFFFF",GradientType=1);
+
+            opacity: 1;
+          }
+          .fadeHorizontal {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background: rgb(255, 255, 255);
+            background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 26%, rgba(255, 255, 255, 0) 100%);
+            background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 26%, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 26%, rgba(255, 255, 255, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+
+            opacity: 0.5;
+          }
+        }
+
+        .pageWidth {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          z-index: 10;
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          align-items: flex-start;
+          z-index: 1;
+
+          h2 {
+            font-weight: normal;
+            font-family: "DaimlerCACRegular", serif;
+            position: relative;
+            z-index: 1;
+            max-width: 500px;
+
+            font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+            margin-bottom: 0.3em;
+          }
+
+          p {
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
+            line-height: 1.4em;
+            max-width: 500px;
+            margin-bottom: 1.3em;
+          }
+
+          p span {
+            white-space: nowrap;
+          }
+        }
+
+        picture {
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+
+    .splide__pagination {
+      flex-direction: row;
+      align-items: center;
+      bottom: 25px;
+      gap: 18px;
+
+      .splide__pagination__page {
+        background: #fff;
+        border: 0;
+        border-radius: 0;
+        display: inline-block;
+        height: 4px;
+        width: 75px;
+        opacity: 1;
+        padding: 0;
+        position: relative;
+        transition: transform 0.2s linear;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+        margin: 0;
+      }
+
+      .splide__pagination__page.is-active {
+        background: var(--wb-blue-65);
+        transform: scale(1);
+        z-index: 1;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #vans {
+    #introSlider {
+      height: 66.7vw;
+
+      & ul.splide__list {
+        & li {
+          &.light,
+          &.dark {
+            .fadeHorizontal {
+              display: none;
+            }
+          }
+
+          &.light,
+          &.dark {
+            .fadeVertical {
+              top: 50%;
+            }
+          }
+
+          .pageWidth {
+            justify-content: flex-end;
+            padding-bottom: 3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #vans {
+    #introSlider {
+      height: 115vw;
+      /* margin-bottom: 2em; */
+
+      .splide__pagination {
+        gap: 12px;
+
+        .splide__pagination__page {
+          height: 3px;
+          width: 55px;
+        }
+      }
+
+      ul.splide__list {
+        li {
+          &.light {
+            background-color: #fff;
+            .fadeVertical {
+              top: 50%;
+              bottom: 15vw;
+            }
+          }
+
+          &.dark {
+            background-color: #000;
+            .fadeVertical {
+              top: 50%;
+              bottom: 15vw;
+            }
+          }
+
+          .pageWidth {
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 2em;
+          }
+
+          .content {
+            margin-bottom: 1em;
+            align-items: center;
+
+            h2 {
+              text-align: center;
+              max-width: 100%;
+            }
+
+            p {
+              text-align: center;
+              max-width: 100%;
+            }
+          }
+
+          picture {
+            bottom: 15vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #vans {
+    #introSlider {
+      height: 140vw;
+
+      .splide__pagination {
+        gap: 8px;
+
+        .splide__pagination__page {
+          height: 3px;
+          width: 30px;
+        }
+      }
+
+      ul.splide__list {
+        li {
+          &.light {
+            background-color: #fff;
+            .fadeVertical {
+              top: 50%;
+              bottom: 40vw;
+            }
+          }
+
+          &.dark {
+            background-color: #000;
+            .fadeVertical {
+              top: 50%;
+              bottom: 40vw;
+            }
+          }
+
+          picture {
+            bottom: 40vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #vans {
+    #introSlider {
+      height: 160vw;
+
+      ul.splide__list {
+        li {
+          &.light {
+            background-color: #fff;
+            .fadeVertical {
+              top: 30%;
+              bottom: 60vw;
+            }
+          }
+
+          &.dark {
+            background-color: #000;
+            .fadeVertical {
+              top: 30%;
+              bottom: 60vw;
+            }
+          }
+
+          picture {
+            bottom: 60vw;
+          }
+        }
+      }
+    }
+  }
+}

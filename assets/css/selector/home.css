@@ -1,0 +1,25 @@
+#selector {
+  #home {
+    background-color: #000 !important;
+    min-height: 100vh;
+  }
+}
+/* SELECTOR HOME ========================================================== */
+#selector {
+  #home .BUs {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #selector {
+    #home .BUs {
+      display: grid;
+      grid-auto-flow: initial;
+      grid-auto-columns: initial;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

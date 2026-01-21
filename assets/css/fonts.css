@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "DaimlerCACRegular";
+  src: url("../fonts/DaimlerCACRegular.eot");
+  src: url("../fonts/DaimlerCACRegular.eot") format("embedded-opentype"), url("../fonts/DaimlerCACRegular.woff2") format("woff2"), url("../fonts/DaimlerCACRegular.woff") format("woff"), url("../fonts/DaimlerCACRegular.ttf") format("truetype"), url("../fonts/DaimlerCACRegular.svg#DaimlerCACRegular") format("svg");
+  font-display: swap;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "MBCorpoSTextOfficeRegular";
+  src: url("../fonts/MBCorpoSTextOfficeRegular.eot");
+  src: url("../fonts/MBCorpoSTextOfficeRegular.eot") format("embedded-opentype"), url("../fonts/MBCorpoSTextOfficeRegular.woff2") format("woff2"), url("../fonts/MBCorpoSTextOfficeRegular.woff") format("woff"), url("../fonts/MBCorpoSTextOfficeRegular.ttf") format("truetype"), url("../fonts/MBCorpoSTextOfficeRegular.svg#MBCorpoSTextOfficeRegular") format("svg");
+  font-display: swap;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "MBCorpoSTextOfficeBold";
+  src: url("../fonts/MBCorpoSTextOfficeBold.eot");
+  src: url("../fonts/MBCorpoSTextOfficeBold.eot") format("embedded-opentype"), url("../fonts/MBCorpoSTextOfficeBold.woff2") format("woff2"), url("../fonts/MBCorpoSTextOfficeBold.woff") format("woff"), url("../fonts/MBCorpoSTextOfficeBold.ttf") format("truetype"), url("../fonts/MBCorpoSTextOfficeBold.svg#MBCorpoSTextOfficeBold") format("svg");
+  font-display: swap;
+  font-weight: bold;
+}
+
+/* MBCorpoSTextRegular */
+@font-face {
+  font-family: "MBCorpoSTextRegular";
+  src: url("../fonts/MBCorpoSText-Regular.eot");
+  src: url("../fonts/MBCorpoSText-Regular.eot") format("embedded-opentype"), url("../fonts/MBCorpoSText-Regular.woff2") format("woff2"), url("../fonts/MBCorpoSText-Regular.woff") format("woff"), url("../fonts/MBCorpoSText-Regular.ttf") format("truetype"), url("../fonts/MBCorpoSText-Regular.svg#MBCorpoSText-Regular") format("svg");
+  font-display: swap;
+  font-weight: normal;
+}
+
+/* MBCorpoSTitleCondOfficeBold */
+@font-face {
+  font-family: "MBCorpoSTitleCondOfficeBold";
+  src: url("../fonts/MBCorpoSTitleCondOfficeBold.eot");
+  src: url("../fonts/MBCorpoSTitleCondOfficeBold.eot") format("embedded-opentype"), url("../fonts/MBCorpoSTitleCondOfficeBold.woff2") format("woff2"), url("../fonts/MBCorpoSTitleCondOfficeBold.woff") format("woff"), url("../fonts/MBCorpoSTitleCondOfficeBold.ttf") format("truetype"), url("../fonts/MBCorpoSTitleCondOfficeBold.svg#MBCorpoSTitleCondOfficeBold") format("svg");
+  font-display: swap;
+  font-weight: bold;
+}
+/* MBCorpoSTitleCondOfficeRegular */
+@font-face {
+  font-family: "MBCorpoSTitleCondOfficeRegular";
+  src: url("../fonts/MBCorpoATitleCondOffice-Regular.eot");
+  src: url("../fonts/MBCorpoATitleCondOffice-Regular.eot") format("embedded-opentype"), url("../fonts/MBCorpoATitleCondOffice-Regular.woff2") format("woff2"), url("../fonts/MBCorpoATitleCondOffice-Regular.woff") format("woff"), url("../fonts/MBCorpoATitleCondOffice-Regular.ttf") format("truetype"), url("../fonts/MBCorpoATitleCondOffice-Regular.svg#MBCorpoATitleCondOffice-Regular") format("svg");
+  font-display: swap;
+  font-weight: normal;
+}

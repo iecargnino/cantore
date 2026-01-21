@@ -1,0 +1,115 @@
+#camiones {
+  #promociones {
+    margin-top: 100px;
+    margin-bottom: 80px;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2em;
+      row-gap: 4em;
+
+      h2 {
+        font-family: "MBCorpoSTitleCondOfficeRegular";
+        font-weight: normal;
+        position: relative;
+        z-index: 1;
+        font-size: 18px;
+        font-size: clamp(1.8rem, 2.8vw, 2rem);
+        line-height: 1.1em;
+        margin-bottom: 0.1em;
+
+        span {
+          font-weight: bold;
+          font-family: "MBCorpoSTitleCondOfficeBold", serif;
+          text-transform: uppercase;
+          position: relative;
+          z-index: 1;
+          font-size: clamp(1.1rem, 4.5vw, 1.2rem);
+          line-height: 1;
+        }
+      }
+
+      h3 {
+        font-weight: bold;
+        font-family: "MBCorpoSTitleCondOfficeBold", serif;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+        font-size: clamp(1.1rem, 4.5vw, 1.2rem);
+        line-height: 1;
+        margin-bottom: 0;
+      }
+
+      p.price {
+        position: relative;
+        z-index: 1;
+        font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+        line-height: 1;
+        margin-bottom: 1.3em;
+        font-weight: 700;
+      }
+
+      p,
+      ul li {
+        font-size: clamp(0.9rem, 4.5vw, 1.12rem);
+        line-height: 1.4em;
+        margin-bottom: 0.8em;
+      }
+
+      p.valid {
+        text-transform: uppercase;
+        color: #999;
+      }
+
+      p.dto {
+        font-weight: bold;
+        font-family: "MBCorpoSTitleCondOfficeBold", serif;
+        text-transform: uppercase;
+      }
+
+      picture {
+        height: 0;
+        padding-top: 56%;
+        width: 100%;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1em;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          object-fit: cover;
+          object-position: 50% 50%;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  #camiones {
+    #promociones {
+      ul {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  #camiones {
+    #promociones {
+      ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

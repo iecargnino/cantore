@@ -1,0 +1,188 @@
+#camiones {
+  #menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100000;
+
+    .pageWidth {
+      height: 100vh;
+      padding-top: 149px;
+      padding-bottom: 32px;
+    }
+
+    .menuWrapper {
+      display: flex;
+      gap: 40px;
+
+      max-height: calc(100vh - 149px);
+
+      .level {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+
+        color: #fff;
+        background: rgb(26, 26, 26);
+        background: -moz-linear-gradient(0deg, rgba(26, 26, 26, 1) 0%, rgba(51, 51, 51, 1) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(26, 26, 26, 1) 0%, rgba(51, 51, 51, 1) 100%);
+        background: linear-gradient(0deg, rgba(26, 26, 26, 1) 0%, rgba(51, 51, 51, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a1a",endColorstr="#333333",GradientType=1);
+
+        padding: 24px 18px 24px 26px;
+        grid-column-end: span 5;
+        grid-column-start: auto;
+
+        .innerNav {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          .back {
+            flex: 1;
+
+            a {
+              font-size: 15px;
+              display: inline-block;
+              padding: 0.6em 0.8em 0.6em 2em;
+              font-family: "MBCorpoSTextOfficeBold", sans-serif;
+              font-weight: bold;
+              color: #fff;
+
+              background-image: url("/images/camiones/icons/menu-back.svg");
+              background-repeat: no-repeat;
+              background-position: 0.7em center;
+              background-size: 12px 12px;
+
+              &:hover {
+                background-color: var(--wb-grey-85);
+              }
+            }
+          }
+          button {
+            width: 36px;
+            height: 36px;
+            text-indent: 40px;
+            overflow: hidden;
+            border: none;
+            background-color: transparent;
+            background-image: url("/images/camiones/icons/menu-close.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 12px 12px;
+
+            &:hover {
+              background-image: url("/images/camiones/icons/menu-close-hover.svg");
+            }
+          }
+        }
+
+        h3 {
+          font-weight: bold;
+          font-family: "MBCorpoSTitleCondOfficeBold", serif;
+          text-transform: uppercase;
+          position: relative;
+          z-index: 1;
+          font-size: clamp(1.3rem, 4.5vw, 2.1rem);
+          margin-bottom: 22px;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          li {
+            a {
+              font-size: 18px;
+              display: flex;
+              width: 100%;
+              padding: 0.6em 0;
+              color: #fff;
+              /* transition: all 0.2s; */
+
+              &:hover {
+                color: var(--truck-blue);
+              }
+            }
+
+            a.nextLevel {
+              background-image: url("/images/camiones/icons/menu-next-level.svg");
+              background-repeat: no-repeat;
+              background-position: right 5px center;
+              background-size: 24px 24px;
+            }
+
+            a.linkout {
+              background-image: url("/images/camiones/icons/menu-linkout.svg");
+              background-repeat: no-repeat;
+              background-position: right 10px center;
+              background-size: 24px 24px;
+            }
+          }
+        }
+
+        .level:nth-child(2) {
+          flex: 1;
+        }
+      }
+
+      .level.modelos {
+        background: rgb(26, 26, 26);
+        background: -moz-linear-gradient(0deg, rgba(26, 26, 26, 1) 0%, rgba(13, 13, 13, 1) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(26, 26, 26, 1) 0%, rgba(13, 13, 13, 1) 100%);
+        background: linear-gradient(0deg, rgba(26, 26, 26, 1) 0%, rgba(13, 13, 13, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a1a",endColorstr="#0d0d0d",GradientType=1);
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #camiones {
+    #menu {
+      background: transparent;
+      top: 76px;
+
+      .pageWidth {
+        width: 100%;
+        padding: 0;
+
+        .menuWrapper {
+          max-height: calc(100vh - 76px);
+          .level.modelos {
+            max-width: 100%;
+            padding-top: 0;
+
+            #menuModels {
+              padding-top: 20px;
+            }
+
+            .pageWidth {
+              padding-top: 0;
+            }
+
+            .innerNav {
+              button {
+                display: none;
+              }
+            }
+          }
+          .level:not(:last-child) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.menuOpen {
+  position: fixed;
+  overflow-y: hidden;
+  width: 100%;
+}

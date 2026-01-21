@@ -1,0 +1,30 @@
+#autos {
+  #gracias {
+    font-size: clamp(1rem, 4.5vw, 1.6rem);
+    padding: 1.8em 0 2.8em 0;
+
+    .pageWidth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h1 {
+        font-weight: normal;
+        font-family: "DaimlerCACRegular", serif;
+        position: relative;
+        z-index: 1;
+
+        margin-bottom: 0.4em;
+      }
+
+      p {
+        font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+        line-height: 1.4em;
+        max-width: 760px;
+        margin-bottom: 0.4em;
+        color: var(--wb-grey-20);
+      }
+    }
+  }
+}

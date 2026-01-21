@@ -1,0 +1,143 @@
+#camiones {
+  #caracteristicas {
+    &.x3 {
+      ul {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 50px;
+      row-gap: 80px;
+
+      margin-bottom: 50px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0px;
+      }
+    }
+
+    a {
+      font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+      font-size: 14px;
+      line-height: 1.3em;
+      font-family: "MBCorpoSTextOfficeBold";
+      margin-top: 1.3em;
+
+      img {
+        height: 12px;
+        margin-left: 2px;
+        display: inline-block;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #camiones {
+    #caracteristicas {
+      &.x3 {
+        ul {
+          grid-template-columns: repeat(1, 1fr);
+          max-width: 680px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #camiones {
+    #caracteristicas {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 50px;
+        row-gap: 80px;
+      }
+    }
+  }
+}
+#camiones {
+  .caracteristicaCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+
+    h2 {
+      font-family: "MBCorpoSTitleCondOfficeRegular";
+      font-weight: normal;
+      position: relative;
+      z-index: 1;
+      font-size: 18px;
+      margin-bottom: 0.6em;
+      font-size: clamp(1.3rem, 3vw, 2.2rem);
+      font-size: 34px;
+    }
+
+    p,
+    ul li {
+      font-size: clamp(0.9rem, 4.5vw, 1.12rem);
+      line-height: 1.4em;
+      margin-bottom: 0.4em;
+    }
+
+    picture {
+      height: 0;
+      padding-top: 56%;
+      width: 100%;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 30px;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+        object-position: 50% 50%;
+        transition: 0.3s;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
+      li {
+        padding-left: 1em;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 1.2em;
+          height: 1.2em;
+          top: 0.1em;
+          left: -0.2em;
+          background-image: url("/images/camiones/icons/check-blue.svg");
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}

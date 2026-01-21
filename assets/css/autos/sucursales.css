@@ -1,0 +1,144 @@
+#autos {
+  #sucursales {
+    h2 {
+      font-weight: normal;
+      font-family: "DaimlerCACRegular", serif;
+      position: relative;
+      z-index: 1;
+
+      font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+      margin-bottom: 20px;
+      margin-top: 0.6em;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      margin-bottom: 8em;
+
+      li {
+        display: flex;
+        gap: 30px;
+
+        &:not(:first-child) {
+          border-top: 1px solid var(--wb-grey-85);
+          padding-top: 30px;
+        }
+
+        .map {
+          width: 460px;
+
+          .wrapper {
+            margin-top: 8px;
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .content {
+          flex: 1;
+
+          h3 {
+            font-weight: normal;
+            font-family: "DaimlerCACRegular", serif;
+            position: relative;
+            z-index: 1;
+
+            font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+          }
+
+          p.ubicacion {
+            font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+            line-height: 1.4em;
+            color: var(--wb-grey-35);
+            margin-bottom: 0.8em;
+          }
+
+          .contact {
+            background-color: var(--wb-grey-95);
+            padding: 15px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            > div {
+              display: flex;
+              align-items: flex-start;
+              gap: 8px;
+            }
+
+            img {
+              margin-top: 2px;
+              width: 18px;
+              height: 18px;
+              object-fit: contain;
+              object-position: 50% 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #autos {
+    #sucursales {
+      ul {
+        li {
+          .map {
+            width: 380px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  #autos {
+    #sucursales {
+      ul {
+        li {
+          .map {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #autos {
+    #sucursales {
+      ul {
+        gap: 60px;
+        li {
+          flex-direction: column;
+          .map {
+            width: 100%;
+            height: 200px;
+          }
+          &:not(:first-child) {
+            padding-top: 60px;
+          }
+        }
+      }
+    }
+  }
+}

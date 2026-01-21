@@ -1,0 +1,143 @@
+:root,
+:host {
+  --wb-logo-wrapper-width: 80px;
+}
+
+#autos {
+  header {
+    background-color: #000000;
+    color: #fff;
+
+    .mainWrapper {
+      padding: 23px 0;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .navWrapper {
+        width: calc(50% - var(--wb-logo-wrapper-width));
+
+        .toggleMenu {
+          display: none;
+        }
+        nav ul {
+          display: flex;
+          gap: 24px;
+
+          button {
+            background: transparent;
+            border: none;
+            color: var(--wb-grey-45);
+            font-size: 15px;
+            font-weight: 400;
+            display: block;
+            white-space: nowrap;
+            padding: 6px 8px;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .agencyWrapper {
+        width: calc(50% - var(--wb-logo-wrapper-width));
+        display: flex;
+        justify-content: flex-end;
+
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .logoWrapper {
+        width: var(--wb-logo-wrapper-width);
+        display: flex;
+        justify-content: center;
+
+        .star {
+          margin-top: -3px;
+          width: 40px;
+          height: auto;
+        }
+      }
+    }
+
+    .brand {
+      .pageWidth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .name {
+      background-color: var(--wb-grey-15);
+      padding: 15px 0;
+      color: #fff;
+      .pageWidth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        font-weight: normal;
+        font-size: clamp(1.9rem, 7vw, 2.1rem);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #autos {
+    header {
+      .mainWrapper {
+        .navWrapper {
+          .toggleMenu {
+            display: block;
+            width: 36px;
+            height: 36px;
+            overflow: hidden;
+            text-indent: 110%;
+            padding: 0;
+            border: none;
+            background: transparent;
+
+            background-image: url("/images/autos/icons/menu-toggle-open.svg");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+          }
+
+          nav ul {
+            display: none;
+          }
+        }
+
+        .agencyWrapper {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #autos {
+    header {
+      .pageWidth {
+        padding: 0;
+      }
+      .mainWrapper {
+        .navWrapper {
+          .toggleMenu.open {
+            background-image: url("/images/autos/icons/menu-toggle-close.svg");
+          }
+        }
+      }
+    }
+  }
+}

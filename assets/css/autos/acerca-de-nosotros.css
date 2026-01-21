@@ -1,0 +1,59 @@
+#autos {
+  #acerca {
+    position: relative;
+
+    .wrapper {
+      max-width: 760px;
+      margin-bottom: 100px;
+
+      h2 {
+        font-weight: normal;
+        font-family: "DaimlerCACRegular", serif;
+        position: relative;
+        z-index: 1;
+
+        font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+        margin-bottom: 20px;
+        margin-top: 0.6em;
+      }
+
+      p {
+        font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+        line-height: 1.4em;
+        max-width: 760px;
+        margin-bottom: 1.4em;
+        color: var(--wb-grey-20);
+
+        strong {
+          font-weight: bold;
+          font-family: "MBCorpoSTextOfficeBold", serif;
+        }
+      }
+
+      ul {
+        li {
+          font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+          line-height: 1.4em;
+          max-width: 760px;
+          margin-bottom: 1.4em;
+          color: var(--wb-grey-20);
+          padding-left: 1em;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 1.2em;
+            height: 1.2em;
+            top: 0.1em;
+            left: -0.2em;
+            background-image: url("/images/autos/icons/check-blue.svg");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+#camiones {
+  #resumen {
+    font-size: clamp(1.4rem, 4.5vw, 2.46rem);
+    padding: 1.4em 0 0.8em 0;
+
+    h3 {
+      font-weight: bold;
+      font-family: "MBCorpoSTitleCondOfficeBold", serif;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+      line-height: 1.2em;
+
+      padding-top: 0.4em;
+      margin-bottom: 0.4em;
+      max-width: 1000px;
+
+      &:after {
+        content: "";
+        width: 46px;
+        border-top: 2px solid #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    p {
+      font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+      line-height: 1.4em;
+      max-width: 760px;
+      margin-bottom: 1.4em;
+    }
+  }
+}

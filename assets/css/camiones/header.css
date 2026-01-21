@@ -1,0 +1,170 @@
+:root,
+:host {
+  --wb-logo-wrapper-width: 80px;
+}
+
+#camiones {
+  header {
+    background-color: #000000;
+    color: #fff;
+
+    .mainWrapper {
+      padding: 23px 0;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      height: 108px;
+
+      .agencyWrapper {
+        width: calc(50% - var(--wb-logo-wrapper-width));
+        display: flex;
+        justify-content: flex-end;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        margin-bottom: 14px;
+      }
+
+      .logoWrapper {
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          gap: 64px;
+
+          .star {
+            width: 64px;
+            height: auto;
+          }
+          .brand {
+            width: 112px;
+            height: 33px;
+            margin-bottom: 3px;
+          }
+        }
+      }
+    }
+
+    .brand {
+      .pageWidth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .name {
+      background-color: var(--wb-grey-15);
+      padding: 15px 0;
+      color: #fff;
+      .pageWidth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        font-weight: normal;
+        font-size: clamp(1.9rem, 7vw, 2.1rem);
+      }
+    }
+
+    .navWrapper {
+      /* width: calc(50% - var(--wb-logo-wrapper-width)); */
+      background-color: var(--wb-grey-10);
+
+      .toggleMenu {
+        display: none;
+      }
+      nav ul {
+        display: flex;
+        gap: 24px;
+
+        button {
+          background: transparent;
+          border: none;
+          color: var(--wb-grey-85);
+          font-size: 15px;
+          font-weight: 400;
+          display: block;
+          white-space: nowrap;
+          padding: 12px 8px;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #camiones {
+    header {
+      .mainWrapper {
+        height: 76px;
+        padding: 0 0 16px 0;
+
+        .logoWrapper {
+          a {
+            gap: 51px;
+
+            .star {
+              width: 40px;
+              height: auto;
+            }
+            .brand {
+              width: 88px;
+              height: 24px;
+              margin-bottom: 3px;
+            }
+          }
+        }
+
+        .agencyWrapper {
+          span {
+            display: none;
+          }
+        }
+      }
+
+      .navWrapper {
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        background: transparent;
+
+        .pageWidth {
+          padding: 0;
+        }
+
+        .toggleMenu {
+          display: block;
+          width: 36px;
+          height: 36px;
+          overflow: hidden;
+          text-indent: 110%;
+          padding: 0;
+          border: none;
+          background: transparent;
+
+          background-image: url("/images/camiones/icons/menu-toggle-open.svg");
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: contain;
+        }
+
+        .toggleMenu.open {
+          background-image: url("/images/camiones/icons/menu-toggle-close.svg");
+        }
+
+        nav ul {
+          display: none;
+        }
+      }
+    }
+  }
+}
