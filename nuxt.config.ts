@@ -168,8 +168,7 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    host: '0.0.0.0',
-    port: 3000
+    preset: 'render-com'
   },
   gtag: { id: "" },
 });
