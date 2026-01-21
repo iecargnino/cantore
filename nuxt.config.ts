@@ -162,13 +162,14 @@ export default defineNuxtConfig({
     once: true,
     // useClassNames: true
   },
-  public: {
-    baseURL: "https://www2.mercedes-benz.com.ar/api/",
+  runtimeConfig: {
+    public: {
+      baseURL: "https://www2.mercedes-benz.com.ar/api/",
+    },
   },
-},
   nitro: {
-  host: '0.0.0.0',
-  port: 3000
-},
+    host: '0.0.0.0',
+    port: 3000
+  },
   gtag: { id: "" },
 });
