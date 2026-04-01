@@ -31,6 +31,14 @@
               </li>
               <li>
                 <CamionesCardsModeloCard
+                  titulo="Axor"
+                  miniatura="axor.png"
+                  link="/camiones/modelos/axor"
+                >
+                </CamionesCardsModeloCard>
+              </li>
+              <li>
+                <CamionesCardsModeloCard
                   titulo="Atego"
                   etiqueta="Nueva generación"
                   miniatura="atego.png"

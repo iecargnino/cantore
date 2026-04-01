@@ -90,6 +90,7 @@
       font-size: clamp(0.9rem, 4.5vw, 1.12rem);
       line-height: 1.4em;
       margin-bottom: 0.4em;
+      white-space: pre-line;
     }
 
     picture {

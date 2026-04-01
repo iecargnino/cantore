@@ -32,17 +32,18 @@
         a {
           display: flex;
           justify-content: center;
-          align-items: flex-end;
-          gap: 64px;
+          align-items: center;
+          gap: 4px;
 
           .star {
             width: 64px;
-            height: auto;
+            height: 46px;
           }
+
           .brand {
             width: 112px;
             height: 33px;
-            margin-bottom: 3px;
+            margin-top: 4px;
           }
         }
       }
@@ -60,11 +61,13 @@
       background-color: var(--wb-grey-15);
       padding: 15px 0;
       color: #fff;
+
       .pageWidth {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
+
       h1 {
         font-weight: normal;
         font-size: clamp(1.9rem, 7vw, 2.1rem);
@@ -78,6 +81,7 @@
       .toggleMenu {
         display: none;
       }
+
       nav ul {
         display: flex;
         gap: 24px;
@@ -110,16 +114,16 @@
 
         .logoWrapper {
           a {
-            gap: 51px;
+            gap: 12px;
 
             .star {
               width: 40px;
               height: auto;
             }
+
             .brand {
               width: 88px;
               height: 24px;
-              margin-bottom: 3px;
             }
           }
         }

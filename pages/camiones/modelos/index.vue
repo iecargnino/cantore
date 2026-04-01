@@ -41,6 +41,14 @@
             >
             </CamionesCardsModeloCard>
           </li>
+          <li>
+            <CamionesCardsModeloCard
+              titulo="Axor"
+              miniatura="axor.png"
+              link="/camiones/modelos/axor"
+            >
+            </CamionesCardsModeloCard>
+          </li>
         </ul>
         <h3>Todo terreno</h3>
         <ul>

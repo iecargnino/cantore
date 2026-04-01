@@ -13,6 +13,94 @@
       aria-label="Información y productos destacados"
       id="introSlider"
     >
+      <SplideSlide
+        data-aos="fade"
+        data-aos-duration="1200"
+        data-aos-delay="0"
+        class="dark"
+      >
+        <div class="pageWidth">
+          <div class="content">
+            <h3>Nuestros Camiones</h3>
+            <h2>Axor 2545.</h2>
+            <p>El de siempre, como nunca.</p>
+            <NuxtLink
+              to="/camiones/modelos/axor"
+              class="btn"
+              >Más información</NuxtLink
+            >
+          </div>
+        </div>
+        <picture>
+          <source
+            srcset="~/public/images/camiones/home/intro/axor-2545-m.jpg"
+            type="image/jpeg"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="~/public/images/camiones/home/intro/axor-2545-t.jpg"
+            type="image/jpeg"
+            media="(min-width: 768px) and (max-width:1023px)"
+          />
+          <source
+            srcset="~/public/images/camiones/home/intro/axor-2545.jpg"
+            type="image/jpeg"
+            media="(min-width: 1024px)"
+          />
+
+          <img
+            src="~/public/images/camiones/home/intro/axor-2545.jpg"
+            alt="Axor 2545"
+          />
+        </picture>
+        <div class="fadeVertical"></div>
+        <div class="fadeHorizontal"></div>
+      </SplideSlide>
+
+      <SplideSlide
+        data-aos="fade"
+        data-aos-duration="1200"
+        data-aos-delay="0"
+        class="dark"
+      >
+        <div class="pageWidth">
+          <div class="content">
+            <h3>Nuestros Camiones</h3>
+            <h2>Axor 2038.</h2>
+            <p>El de siempre, como nunca.</p>
+            <NuxtLink
+              to="/camiones/modelos/axor"
+              class="btn"
+              >Más información</NuxtLink
+            >
+          </div>
+        </div>
+        <picture>
+          <source
+            srcset="~/public/images/camiones/home/intro/axor-2038-m.jpg"
+            type="image/jpeg"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="~/public/images/camiones/home/intro/axor-2038-t.jpg"
+            type="image/jpeg"
+            media="(min-width: 768px) and (max-width:1023px)"
+          />
+          <source
+            srcset="~/public/images/camiones/home/intro/axor-2038.jpg"
+            type="image/jpeg"
+            media="(min-width: 1024px)"
+          />
+
+          <img
+            src="~/public/images/camiones/home/intro/axor-2038.jpg"
+            alt="Axor 2038"
+          />
+        </picture>
+        <div class="fadeVertical"></div>
+        <div class="fadeHorizontal"></div>
+      </SplideSlide>
+
       <!-- Slide -->
       <!-- Definir clase "light" o "dark" para cada slide según corresponda -->
       <SplideSlide
