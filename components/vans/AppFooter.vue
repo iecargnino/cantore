@@ -131,24 +131,6 @@
         </div>
       </div>
     </footer>
-    <div
-      v-if="appConfig.concesionario.contactoFlotante.vans"
-      id="floatingContact"
-    >
-      <div class="pageWidth">
-        <NuxtLink
-          :to="appConfig.concesionario.contactoFlotante.vans"
-          target="_blank"
-          class="contact"
-        >
-          <img
-            src="~/public/images/autos/icons/chat.svg"
-            alt=""
-          />
-          Contáctenos
-        </NuxtLink>
-      </div>
-    </div>
   </div>
 </template>
 

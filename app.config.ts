@@ -29,9 +29,9 @@ export default defineAppConfig({
     // Botón de contacto flotante vía WhatsApp.
     // Definir "https://wa.me/12345678" o dejar vacío para no mostrar el botón.
     contactoFlotante: {
-      autos: "https://wa.me/12345678",
-      vans: "https://wa.me/+543585764446",
-      camiones: "https://wa.me/+543585764446",
+      autos: "https://wa.me/543585121180",
+      vans: "https://wa.me/543585121180",
+      camiones: "https://wa.me/543585121180",
     },
   },
 
